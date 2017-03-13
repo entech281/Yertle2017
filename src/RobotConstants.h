@@ -4,7 +4,7 @@
 #include "WPILib.h"
 
 // Camera definitions
-#define USB_CAMERA  1
+#define USB_CAMERA  0
 #define AXIS_CAMERA 0
 #define CAMERA_SERVO 0
 
@@ -16,7 +16,7 @@ const uint32_t c_joystickLeftPort					= 0;
 const uint32_t c_joystickRightPort					= 1;
 
 // Gamepad Ports
-#define GAMEPAD_ACTIVE 0
+#define GAMEPAD_ACTIVE 1
 const uint32_t c_gamepadJoystickPort				= 2;
 const uint32_t c_prongsOutPortgp					= 13;
 const uint32_t c_pickUpPortgp						= 5;
@@ -28,7 +28,7 @@ const uint32_t c_kickerSlowPortgp					= 4;
 const uint32_t c_gyroResetPortgp					= 9;
 
 // Operator Panel Buttons
-#define PANEL_ACTIVE 1
+#define PANEL_ACTIVE 0
 const uint32_t c_arduinoJoystickPort				= 3;
 const uint32_t c_prongsOutButtonp					= 1;
 const uint32_t c_pickUpButtonp						= 2;

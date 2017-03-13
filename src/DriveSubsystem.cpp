@@ -175,6 +175,8 @@ void DriveSubsystem::TeleopPeriodic()
 
     switch (m_state) {
     case kNone:
+#if 0
+        // Disallow tank mode
         if (m_driveModeToggle->Get() == OperatorButton::kJustPressed) {
             if (m_tankMode) {
                 m_tankMode = false;
@@ -182,6 +184,7 @@ void DriveSubsystem::TeleopPeriodic()
                 m_tankMode = true;
             }
         }
+#endif
         if (m_tankMode){
             m_robotDrive->TankDrive(GetMaxSpeed()*m_joystickLeft->GetY(), GetMaxSpeed()*m_joystickRight->GetY());
             SmartDashboard::PutString("Drive Mode","Tank");

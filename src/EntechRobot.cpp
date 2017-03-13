@@ -250,11 +250,11 @@ void EntechRobot::TeleopPeriodic()
 	}
 
 	if (m_prongsOutButton->Get() == OperatorButton::kPressed) {
-            m_prongs->SetPosition(ProngsSubsystem::kUp);
-            m_drive->SetMaxSpeed(1.0);
-	} else {
-	    m_prongs->SetPosition(ProngsSubsystem::kDown);
+        m_prongs->SetPosition(ProngsSubsystem::kDown);
             m_drive->SetMaxSpeed(0.7);
+	} else {
+        m_prongs->SetPosition(ProngsSubsystem::kUp);
+        m_drive->SetMaxSpeed(1.0);
 	}
 
 	if (m_shooterFastButton->Get() == OperatorButton::kPressed) {
@@ -270,9 +270,9 @@ void EntechRobot::TeleopPeriodic()
 	   	m_shooter->Off();
 	}
 
-	if (m_gyroResetButton->Get() == OperatorButton::kJustPressed){
-            m_drive->ZeroYaw();
-    }
+//	if (m_gyroResetButton->Get() == OperatorButton::kJustPressed){
+//            m_drive->ZeroYaw();
+//    }
 #endif
 
 #if PANEL_ACTIVE
